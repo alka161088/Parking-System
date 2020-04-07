@@ -96,6 +96,38 @@ html,body {
 	text-align: center;
 }
 
+.success-checkmark:after {
+	content:'\2713';
+	background: #008000;
+    border-radius: 50%;
+	display:inline-block;
+	color:#ffffff;
+	padding:6px;
+	float:right;
+	width: 40px;
+	text-align: center;
+  }
+
+/* HIDE RADIO */
+[type=radio] { 
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* IMAGE STYLES */
+[type=radio] + img {
+  cursor: pointer;
+  height: 70px;
+}
+
+/* CHECKED STYLES */
+[type=radio]:checked + img {
+  outline: 2px solid #ff0000;
+}
+
+
 @media screen and (max-width: 425px) {
 	.my-login-page .card-wrapper {
 		width: 90%;

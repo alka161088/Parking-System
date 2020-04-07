@@ -12,27 +12,88 @@
   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/my-login.css">
+
+  <script data-main="../js/app.js" src="../js/require.js"></script>
 </head>
 
 <body>  
-      <div class="search-section" style="margin-top: 10px;" >
+      <div class="search-section" style="margin-top: 10px; margin: 0px" >
         <div>
           <label style="padding-left: 30px;" for="name">Where you want to park?</label>
-          <input style="width: 270px; margin-right: 0px; margin-left: 40px" id="name" type="text" placeholder="Domain Drive, Austin, TX, USA"  name="name" required>
+          <input style="width: 270px; margin-right: 0px; margin-left: 40px" id="name" type="text" placeholder="Domain Drive, Austin, TX, USA"  name="name" >
         </div>
         <div>
           <label style="padding-left: 0px;" for="name">Arrival</label>
-          <input style="width: 270px; margin-left: 10px" id="name" type="text" placeholder="03/10/2020 10.00 AM" name="name" required>
+          <input style="width: 270px; margin-left: 10px" id="name" type="text" placeholder="03/10/2020 10.00 AM" name="name">
         </div>
         <div >
           <label for="name">Departure</label>
-          <input id="name" style="width: 270px; margin-right: 0px;" type="text" placeholder="03/10/2020 12.00 PM" name="name" required>
+          <input id="name" style="width: 270px; margin-right: 0px;" type="text" placeholder="03/10/2020 12.00 PM" name="name">
         </div>            
       </div>   
 
-      <aside>
-        wow
-      </aside>   
+      <div class="map-section" id="map">
+        
+          <script>
+            
+            console.log(process.env);
+          // Initialize and add the map
+          function initMap() {
+            // The location of Uluru
+            var uluru = {lat: 30.266666, lng: -97.733330};
+            
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({position: uluru, map: map});
+          }
+              </script>
+              <!--Load the API from the specified URL
+              * The async attribute allows the browser to render the page while the API loads
+              * The key parameter will contain your own API key (which is not needed for this tutorial)
+              * The callback parameter executes the initMap() function
+              -->
+              <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+              </script>        
+      </div> 
+
+      <div class="select-parking-section">
+        <div style="margin-left: 20px; margin-top: 20px">
+          Car Parking near Domain Drive, Austin, TX, USA
+        </div>
+        <div style="margin-left: 20px; margin: 20px">
+          <h3>Select your parking from below options</h3>
+          <table>
+  <tr>
+    <th>Parking Location</th>
+    <th>Price</th>
+    <th>Distance From Searched Location</th>
+  </tr>
+  <tr>
+    <td>Lane 1 Domain Austin</td>
+    <td>$20</td>
+    <td>0.2 mi</td>
+  </tr>
+  <tr>
+    <td>The Westin Domain Austin</td>
+    <td>$15</td>
+    <td>0.7 mi</td>
+  </tr>
+  <tr>
+    <td>Forever 21 Domain Austin</td>
+    <td>$25</td>
+    <td>1.2 mi</td>
+  </tr>
+  <tr>
+    <td>Lane 2 Domain Austin</td>
+    <td>$10</td>
+    <td>0.5 mi</td>
+  </tr>
+</table>
+        </div>
+      </div>    
   
 </body>
 </html>
