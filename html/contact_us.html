@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Register Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/my-login.css">
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">Contact us</h4>
+							<h5 class="card-title">Fill in the form</h5>
+							<form method="POST" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input id="name" type="text" class="form-control" name="name" required autofocus>
+									<div class="invalid-feedback">
+										What's your full name?
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="email">Email</label>
+									<input id="email" type="email" class="form-control" name="email" required>
+									<div class="invalid-feedback">
+										Your email is invalid
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="name">Area Code</label>
+									<input id="area" type="text" class="form-control" name="area" required autofocus>
+									<div class="invalid-feedback">
+										What's your Area code?
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="name">Phone</label>
+									<input id="phone" type="number" class="form-control" name="phone" required autofocus>
+									<div class="invalid-feedback">
+										What's your Phone?
+									</div>
+								</div>							
+
+								<div class="form-group">
+									<label for="name">Message</label>
+									<input id="message" type="text" class="form-control" name="message" required autofocus>
+									<div class="invalid-feedback">
+										What's your message?
+									</div>
+								</div>
+								
+
+								<div class="form-group m-0">
+									<button type="submit" class="btn btn-primary btn-block">
+										SEND
+									</button>
+								</div>
+								
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="../js/my-login.js"></script>
+</body>
+</html>

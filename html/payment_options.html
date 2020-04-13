@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Payment Options Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/my-login.css">
+    
+</head>
+<body class="my-login-page">
+
+            <section style="float: left; margin: 20px; margin-left: 80px;  margin-right: 0px; width: 40% ">
+
+                <div class="card fat">
+                    <div class="card-body">
+                        <h4 style="margin-bottom: 0px; margin-top: 0px" class="card-title success-checkmark">Your Details</h4>
+                    </div>
+                </div>
+
+                <div style="margin: 0px" class="card fat">
+                    <div style="padding-top: 0px" class="card-body">
+                        <h4 style="margin-bottom: 0px; margin-top: 0px" class="card-title">Select Your Payment Method</h4>
+
+                        <label style="margin:20px">
+                          <input type="radio" name="test" value="small" checked>
+                          <img src="../img/payment_credit_card.png">
+                        </label>
+
+                        <label style="margin:20px">
+                          <input type="radio" name="test" value="big">
+                          <img src="../img/pp-acceptance-large.png">
+                        </label>
+
+                        <div class="form-group">
+                            <label for="cardholder_name">Name of Cardholder</label>
+                            <input id="cardholder_name" type="text" class="form-control" name="cardholder_name" placeholder="John Doe">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="card_number">Card Number</label>
+                            <input id="card_number" type="text" class="form-control" name="card_number" placeholder="1234-5678-1234-5678">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="expiry">Expiry and CVV</label>
+                            <input id="expiry" type="text" class="form-control" name="expiry" placeholder="03/2024  224">
+                        </div>
+                    </div>
+                </div>
+                
+            </section> 
+
+        <section style="float: left; margin: 20px; margin-left: 100px; width: 40%; ">
+                <div class="card fat" style="margin-left: 20px">
+                    <div class="card-body">
+                        <h4 class="card-title">Your Booking Details</h4>
+
+                    <div > 
+                                              
+                        <div class="form-group">
+                            <label for="parking_location">Parking Location</label>
+                            <input id="parking_location" type="text" class="form-control" name="parking_location" placeholder="Lane 1 Domain Austin">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="parking_duration">Parking Duration</label>
+                            <input id="parking_duration" type="text" class="form-control" name="parking_duration" placeholder="2 hours">
+                        </div>
+                                              
+                        <div class="form-group">
+                            <label for="parking_fee">Parking Fee</label>
+                            <input id="parking_fee" type="text" class="form-control" name="parking_fee" placeholder="$18">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="booking_fee">Booking Fee</label>
+                            <input id="booking_fee" type="text" class="form-control" name="booking_fee" placeholder="$2">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="total" style="font-weight: bold;">Total</label>
+                            <input id="total" type="text" class="form-control" name="total" placeholder="$20">
+                        </div>
+
+                    </div>
+
+                    </div>
+                </div>
+                
+            </section>
+   
+   <section >
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="card-wrapper">
+
+                    <div class="form-group m-0">
+                        <button style="margin-top:10px" onclick="location.href = 'register.html';" type="button" class="btn btn-primary btn-block">
+                            COMPLETE
+                        </button>
+                    </div>
+
+                    
+                </form>
+            </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    
+</body>
+</html>
