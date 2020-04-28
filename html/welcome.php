@@ -1,5 +1,7 @@
+<?php
+   include('session.php');
+  ?>
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,20 +10,22 @@
   <title>SpotOn</title>
   
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/my-login.css">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/my-login.css">
 </head>
 
 <body>
-    <header >  
+	
+      <header >
+	<h3>Welcome <?php echo $login_session; ?></h3> 
       SpotOn  
-        <a style ="float: right;" href="html/login.php">Login</a>      
-        <a style ="float: right;" href="html/contact_us.html">Contact</a> 
-        <a style ="float: right;" href="html/about_us.html">About Us</a>                         
+        <a style ="float: right;" href="logout.php">Logout</a>      
+        <a style ="float: right;" href="contact_us.html">Contact</a> 
+        <a style ="float: right;" href="about_us.html">About Us</a>                         
     </header> 
-      <form action = "html/select_parking_spots.php" class="search-section" method="POST" novalidate="">
+      <form action = "select_parking_spot.php" class="search-section" method="POST" novalidate="">
         <div>
           <label style="padding-left: 30px;" for="name">Where you want to park?</label>
           <input style="width: 270px; margin-right: 0px; margin-left: 40px" id="city" type="text" placeholder="My favorite parking location"  name="city" required>
@@ -39,7 +43,7 @@
           <button type="submit" class="btn btn-primary btn-block">
               SEARCH
           </button>
-        </div>               
+        </div>             
       </form>              
 </body>
 </html>

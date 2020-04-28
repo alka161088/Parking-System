@@ -60,27 +60,27 @@
                                               
                         <div class="form-group">
                             <label for="parking_location">Parking Location</label>
-                            <input id="parking_location" type="text" class="form-control" name="parking_location" placeholder="Lane 1 Domain Austin">
+                            <label class="form-control" id="parking_location"></label>
                         </div>
 
                         <div class="form-group">
                             <label for="parking_duration">Parking Duration</label>
-                            <input id="parking_duration" type="text" class="form-control" name="parking_duration" placeholder="2 hours">
+                            <label class="form-control" id="parking_duration"></label>
                         </div>
                                               
                         <div class="form-group">
                             <label for="parking_fee">Parking Fee</label>
-                            <input id="parking_fee" type="text" class="form-control" name="parking_fee" placeholder="$18">
+                            <label class="form-control" id="parking_fee"></label>
                         </div>
 
                         <div class="form-group">
                             <label for="booking_fee">Booking Fee</label>
-                            <input id="booking_fee" type="text" class="form-control" name="booking_fee" placeholder="$2">
+                            <label class="form-control" id="booking_fee"></label>
                         </div>
 
                         <div class="form-group">
                             <label for="total" style="font-weight: bold;">Total</label>
-                            <input id="total" type="text" class="form-control" name="total" placeholder="$20">
+                            <label class="form-control" id="total_parking_fee"></label>
                         </div>
 
                     </div>
@@ -108,6 +108,24 @@
             </div>
         </div>
     </section>
+
+
+    <script>
+        var book_parking = JSON.parse(sessionStorage.getItem("book_parking"));
+        console.log(book_parking.parking_duration)
+
+        var parking_duration = book_parking.parking_duration;
+        if (parking_duration != 'Value not entered') {
+            parking_duration = parking_duration.days + ' days';
+        }
+
+        document.getElementById("parking_location").innerHTML = book_parking.parking_location;
+        document.getElementById("parking_duration").innerHTML = parking_duration;
+        document.getElementById("parking_fee").innerHTML = book_parking.parking_fee;
+        document.getElementById("booking_fee").innerHTML = book_parking.booking_fee;
+        document.getElementById("total_parking_fee").innerHTML = book_parking.total_parking_fee;
+        
+    </script>
     
     
 </body>

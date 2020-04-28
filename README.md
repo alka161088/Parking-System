@@ -1,2 +1,0 @@
-# Parking-System
-SE project
