@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>User Profile Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../css/my-login.css">
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center h-100">
+				<div class="card-wrapper">
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title">My Details</h4>
+							<form method="POST" class="my-login-validation" novalidate="">
+								<div class="form-group">
+									<label for="email">Email</label>
+									<p id="email" type="text" class="form-control" name="email">john.doe@gmail.com</p>
+								</div>
+								
+								<div class="form-group">
+									<label for="name">Full Name</label>
+									<p id="name" type="text" class="form-control" name="name">John Doe</p>
+									
+								</div>
+
+								
+
+								<div class="form-group">
+									<label for="city">City of Residence</label>
+									<p id="city" type="text" class="form-control" name="city">Austin</p>
+								</div>
+
+								<div class="form-group">
+									<label for="name">Area Code</label>
+									<p id="zip" type="text" class="form-control" name="zip">12345</p>
+								</div>
+
+								<div class="form-group">
+									<label for="name">Phone</label>
+									<p id="phone" type="text" class="form-control" name="phone">111-222-3333</p>
+								</div>															
+
+								<div class="form-group m-0">
+									<button onclick="location.href = 'edit_user_profile.html';" type="button" class="btn btn-primary btn-block">
+										Edit Information
+									</button>
+								</div>								
+							</form>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	<script src="../js/my-login.js"></script>
+</body>
+</html>

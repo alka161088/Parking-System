@@ -129,18 +129,20 @@ html,body {
 
 
 @media screen and (max-width: 425px) {
-	.my-login-page .card-wrapper {
-		width: 90%;
-		margin: 0 auto;
+	.search-section .card-wrapper {
+		float: none;
+    width: 100%;
 	}
 }
 
 @media screen and (max-width: 320px) {
-	.my-login-page .card.fat {
-		padding: 0;
+	.search-section .card.fat {
+		float: none;
+    width: 100%;
 	}
 
-	.my-login-page .card.fat .card-body {
-		padding: 15px;
+	.search-section .card.fat .card-body {
+		float: none;
+    width: 100%;
 	}
 }

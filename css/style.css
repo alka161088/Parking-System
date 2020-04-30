@@ -1,9 +1,3 @@
-/*
-    Theme Name: Delicious
-    Theme URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-    Author: BootstrapMade.com
-    Author URL: https://bootstrapmade.com
-*/
 
 body {
 	font-size: 15px;
@@ -576,4 +570,40 @@ a {
     }
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+@media screen and (max-width: 425px) {
+	.my-login-page .card-wrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.my-login-page .card.fat {
+		padding: 0;
+	}
+
+	.my-login-page .card.fat .card-body {
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.search-section .card-wrapper {
+		float: none;
+    width: 100%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.search-section .card.fat {
+		float: none;
+    width: 100%;
+	}
+
+	.search-section .card.fat .card-body {
+		float: none;
+    width: 100%;
+	}
 }

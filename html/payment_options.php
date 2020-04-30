@@ -1,3 +1,6 @@
+<?php
+   include('session.php');
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,14 +14,16 @@
 </head>
 <body class="my-login-page">
 
-    <header>  
-      SpotOn  
-        <a style ="float: right;" href="login.html">Login</a>      
-        <a style ="float: right;" href="contact_us.html">Contact</a> 
-        <a style ="float: right;" href="about_us.html">About Us</a>                         
+     <header >  
+      <!-- <h4>Welcome <?php echo $login_session; ?></h4> -->
+      <a style ="font-size:100%; color:#FFFFFF;" href="welcome.php">SpotOn</a>
+        <a style ="float: right; color:#FFFFFF;" href="logout.php">Logout</a>      
+        <a style ="float: right; color:#FFFFFF;" href="contact_us.html">Contact</a> 
+        <a style ="float: right; color:#FFFFFF;" href="about_us.html">About Us</a>                         
     </header>
 
-            <section style="float: left; margin: 10px; margin-left: 80px;  margin-right: 0px; width: 40% ">
+       
+            <section style="float: left; margin: 0px; margin-left: 80px;  margin-right: 0px; width: 40% ">
 
                 <div class="card fat">
                     <div class="card-body">
@@ -42,24 +47,24 @@
 
                         <div class="form-group">
                             <label for="cardholder_name">Name of Cardholder</label>
-                            <input id="cardholder_name" type="text" class="form-control" name="cardholder_name" placeholder="John Doe">
+                            <input id="cardholder_name" type="text" class="form-control" name="cardholder_name" placeholder="">
                         </div>
 
                         <div class="form-group">
                             <label for="card_number">Card Number</label>
-                            <input id="card_number" type="text" class="form-control" name="card_number" placeholder="1234-5678-1234-5678">
+                            <input id="card_number" type="text" class="form-control" name="card_number" placeholder="">
                         </div>
 
                         <div class="form-group">
                             <label for="expiry">Expiry and CVV</label>
-                            <input id="expiry" type="text" class="form-control" name="expiry" placeholder="03/2024  224">
+                            <input id="expiry" type="text" class="form-control" name="expiry" placeholder="">
                         </div>
                     </div>
                 </div>
                 
             </section> 
 
-        <section style="float: left; margin: 10px; margin-left: 100px; width: 40%; ">
+        <section style="float: left; margin: 0px; margin-left: 100px; width: 40%; ">
                 <div class="card fat" style="margin-left: 20px">
                     <div class="card-body">
                         <h4 class="card-title">Your Booking Details</h4>
@@ -98,13 +103,14 @@
                 
             </section>
    
+
    <section >
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="card-wrapper">
 
                     <div class="form-group m-0">
-                        <button style="margin-top:10px" onclick="location.href = 'register.html';" type="button" class="btn btn-primary btn-block">
+                        <button style="margin-top:10px" onclick="alert('Booking Confirmed. Thanks for booking with us!')" id = "button_click" type="button" class="btn btn-primary btn-block">
                             COMPLETE
                         </button>
                     </div>
@@ -119,6 +125,8 @@
 
 
     <script>
+
+
         var book_parking = JSON.parse(sessionStorage.getItem("book_parking"));
         console.log(book_parking.parking_duration)
 

@@ -1,0 +1,49 @@
+1854-1928 Kramer Ln
+Austin, TX 78758
+30.387234, -97.707759
+
+north lamar
+North Austin Civic Association
+Austin, TX
+30.354047, -97.714049
+
+
+walnut creek 
+
+River Oak Lake Estates
+Austin, TX 78758
+30.407268, -97.683398
+
+
+----
+
+var broadway = {
+          info:
+            '<strong>Chipotle on Broadway</strong><br>\
+            5224 N Broadway St<br> Chicago, IL 60640<br>\
+            <a href="https://goo.gl/maps/jKNEDz4SyyH2">Get Directions</a>',
+          lat: 41.976816,
+          long: -87.659916,
+        }
+
+        var belmont = {
+          info:
+            '<strong>Chipotle on Belmont</strong><br>\
+            1025 W Belmont Ave<br> Chicago, IL 60657<br>\
+            <a href="https://goo.gl/maps/PHfsWTvgKa92">Get Directions</a>',
+          lat: 41.93967,
+          long: -87.655167,
+        }
+
+        var sheridan = {
+          info:
+            '<strong>Chipotle on Sheridan</strong><br>\r\
+            6600 N Sheridan Rd<br> Chicago, IL 60626<br>\
+            <a href="https://goo.gl/maps/QGUrqZPsYp92">Get Directions</a>',
+          lat: 42.002707,
+          long: -87.661236,
+        }
+
+        ----------------
+
+        onclick="location.href = 'book_parking_spot.html';"

@@ -1,3 +1,30 @@
+<?php
+   include("config.php");
+   $error ="";
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($conn,$_POST['email']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['password']); 
+      
+      $sql = "SELECT c_name FROM company WHERE email = '$myusername' and password = '$mypassword'";
+      $result = mysqli_query($conn,$sql);
+      //$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      //$active = $row['user_id'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         
+         header("location: parking_owner_details_add.html");
+      }else {
+         $error = "Your Email or Password is invalid";
+      }
+   }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,13 +37,12 @@
 </head>
 <body class="my-login-page">
 
-    <header >  
-      SpotOn  
-        <a style ="float: right;" href="login_check.html">Login</a>      
-        <a style ="float: right;" href="contact_us.html">Contact</a> 
-        <a style ="float: right;" href="about_us.html">About Us</a>                         
-    </header> 
-
+  <header >  
+      <a style ="font-size:100%; color:#FFFFFF;" href="../index.html">SpotOn</a>
+        <a style ="float: right; color:#FFFFFF;" href="login_check.html">Login</a>      
+        <a style ="float: right; color:#FFFFFF;" href="contact_us.html">Contact</a> 
+        <a style ="float: right; color:#FFFFFF;" href="about_us.html">About Us</a>                         
+</header>
 
     <section class="h-100">
         <div class="container h-100">
@@ -24,7 +50,7 @@
                 <div class="card-wrapper">
                     <div class="card fat">
                         <div class="card-body">
-                            <h4 class="card-title">Login</h4>
+                            <h4 class="card-title">Parking Owner Login</h4>
                             <form method="POST" class="my-login-validation" novalidate="">                              
 
                                 <div class="form-group">
@@ -50,7 +76,7 @@
                                 </div>
 
                                 <div class="form-group m-0">
-                                    <button onclick="location.href = 'signup_check.html';" type="button" class="btn btn-primary btn-block">
+                                    <button onclick="location.href = 'parkingowner_register.html';" type="button" class="btn btn-primary btn-block">
                                         SIGN UP
                                     </button>
                                 </div>
@@ -59,6 +85,7 @@
                                     <a href="forgot.html">Forgot Password</a>
                                 </div>
                             </form>
+							 <div style = "font-size:17px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
                         </div>
                     </div>
                     
