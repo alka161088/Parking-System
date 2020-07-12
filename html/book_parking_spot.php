@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 <?php
    include('session.php');
   ?>
 
+=======
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +12,25 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Book Parking Spot Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/my-login.css">
   
+=======
+    
+   <!--  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
+  <link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+   <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/my-login.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
     
 </head>
 
 <body class="my-login-page">
 
+<<<<<<< HEAD
     <header >  
       <!-- <h4>Welcome <?php echo $login_session; ?></h4> -->
       <a style ="font-size:100%; color:#FFFFFF;" href="welcome.php">SpotOn</a>
@@ -29,6 +43,10 @@
       include 'config.php';
       include('session.php');
 
+=======
+    <?php
+      include 'config.php';
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
       // var_dump($_POST);
       // echo $myarrival;
       // $parking_location = mysqli_real_escape_string($conn,$_POST['city']);
@@ -74,9 +92,13 @@
         $diff=date_diff($arrival_date,$departure_date);
         }   
 
+<<<<<<< HEAD
       // echo $login_session;
       $sql = "select * from user where user_id =$login_sess";
       
+=======
+      $sql = "select * from user ";
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
       $result = $conn->query($sql) or die (mysqli_error($conn));
 
       if ($result->num_rows > 0) {
@@ -96,11 +118,22 @@
     ?>
 
 
+<<<<<<< HEAD
             <section style="float: left; margin: 0px; margin-left: 80px;  margin-right: 0px; width: 40% ">
+=======
+
+    
+
+            <section style="float: left; margin: 20px; margin-left: 80px;  margin-right: 0px; width: 40% ">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
 
                 <div class="card fat">
                     <div class="card-body">
                         <h4 class="card-title">Your Details</h4>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                     <div > 
                                               
                         <div class="form-group">
@@ -136,7 +169,12 @@
             </section>
         
 
+<<<<<<< HEAD
         <section style="float: left; margin: 0px; margin-left: 100px; width: 40%; ">
+=======
+
+        <section style="float: left; margin: 20px; margin-left: 100px; width: 40%; ">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                 <div class="card fat" style="margin-left: 20px">
                     <div class="card-body">
                         <h4 class="card-title">Your Booking Details</h4>
@@ -161,7 +199,11 @@
                                               
                         <div class="form-group">
                             <label for="parking_fee">Parking Fee</label>
+<<<<<<< HEAD
                             <label class="form-control" id="parking_fee" ></label>
+=======
+                            <label class="form-control" id="parking_fee"></label>
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                         </div>
 
                         <div class="form-group">
@@ -186,6 +228,7 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="card-wrapper">
+<<<<<<< HEAD
                   <form action = "insertparking.php"  method="POST" >
 
                     <div class="form-group m-0">
@@ -198,11 +241,19 @@
                         </div> 
 
                         <button style="margin-top:10px" type="submit" class="btn btn-primary btn-block">
+=======
+
+                    <div class="form-group m-0">
+                        <button style="margin-top:10px" type="button" onclick="location.href = 'payment_options.html';" class="btn btn-primary btn-block">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                             BOOK
                         </button>
                     </div>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                     
                 </form>
             </div>
@@ -216,9 +267,12 @@
     <script>
         var selected_parking = JSON.parse(sessionStorage.getItem("selected_parking"));
 
+<<<<<<< HEAD
         var parking_duration = <?php echo json_encode($diff, JSON_PRETTY_PRINT) ?>;
 
         
+=======
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
         var booking_fee = 2;
         var parking_location = selected_parking.area
         if (!parking_location) {
@@ -231,7 +285,11 @@
             parking_fee = "Value not entered";
             total_parking_fee = "Value not available";
         } else {
+<<<<<<< HEAD
             total_parking_fee = Number(selected_parking.price)*Number(parking_duration.d) + Number(booking_fee);
+=======
+            total_parking_fee = Number(selected_parking.price) + Number(booking_fee);
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
         }
 
         document.getElementById("parking_location").innerHTML = parking_location;
@@ -240,7 +298,11 @@
         document.getElementById("total_parking_fee").innerHTML = total_parking_fee;
 
 
+<<<<<<< HEAD
         
+=======
+        var parking_duration = <?php echo json_encode($diff, JSON_PRETTY_PRINT) ?>;
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
 
         var book_parking = {parking_location: parking_location, 
                             parking_duration: parking_duration,
@@ -250,6 +312,7 @@
                         };
         sessionStorage.setItem("book_parking", JSON.stringify(book_parking));
         
+<<<<<<< HEAD
 
         // send parking data 
         document.getElementById('parking_location_data').value = parking_location;
@@ -262,5 +325,9 @@
     </script>
     
 
+=======
+    </script>
+    
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
 </body>
 </html>

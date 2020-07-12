@@ -35,6 +35,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Login Page</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/my-login.css">
 </head>
@@ -50,13 +51,22 @@
     </header>
 
     
+=======
+    <link rel="stylesheet" type="text/css" href="../css/my-login.css">
+</head>
+<body class="my-login-page">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
     <section class="h-100">
         <div class="container h-100">
             <div class="row justify-content-md-center h-100">
                 <div class="card-wrapper">
                     <div class="card fat">
                         <div class="card-body">
+<<<<<<< HEAD
                             <h4 class="card-title">User Login</h4>
+=======
+                            <h4 class="card-title">Login</h4>
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                             <form method="POST" class="my-login-validation" novalidate="">                              
 
                                 <div class="form-group">
@@ -82,7 +92,11 @@
                                 </div>
 
                                 <div class="form-group m-0">
+<<<<<<< HEAD
                                     <button onclick="location.href = 'register.html';" type="button" class="btn btn-primary btn-block">
+=======
+                                    <button onclick="location.href = 'signup_check.html';" type="button" class="btn btn-primary btn-block">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                                         SIGN UP
                                     </button>
                                 </div>

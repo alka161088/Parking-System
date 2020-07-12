@@ -23,8 +23,13 @@
 
 <body>
   <header >  
+<<<<<<< HEAD
     <a style ="font-size:100%; " href="../index.html">SpotOn</a>
       <a style ="float: right;" href="login_check.html">Login</a>     
+=======
+    SpotOn  
+      <a style ="float: right;" href="login.php">Login</a>      
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
       <a style ="float: right;" href="contact_us.html">Contact</a> 
       <a style ="float: right;" href="about_us.html">About Us</a>                         
   </header> 
@@ -77,14 +82,22 @@
       }
       tr:nth-child(even) {background-color: #f2f2f2}
       </style> -->
+<<<<<<< HEAD
       <form action = "login_check.html"  method="POST" >
         <!-- <form method="POST" > -->
+=======
+      <form action = "book_parking_spot.php"  method="POST" >
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
       <table>
         <tr>
           <th></th>
           <th>Company Name</th>
           <th>Location</th>
+<<<<<<< HEAD
           <th>Price (USD)</th>
+=======
+          <th>Price</th>
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
         </tr>
       <?php
       $sql = "SET @row := 0";
@@ -116,7 +129,11 @@
       </table>
 
       <div style="text-align:center;" >
+<<<<<<< HEAD
           <button style="margin-top:10px; background-color: #008000; margin-top: 40px;  padding-left: 70px; padding-right: 70px"  type="submit" class="btn btn-primary ">
+=======
+          <button style="margin-top:10px; background-color: #008000; margin-top: 40px;" type="submit" class="btn btn-primary ">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
               NEXT
           </button>
       </div>   
@@ -195,7 +212,11 @@
             (function(marker, i) {
               return function() {
                 infowindow.setContent(''.concat('<strong>', parking_locations[i].area,'</strong><br>Company Name:',
+<<<<<<< HEAD
             parking_locations[i].c_name,'<br>Price $', parking_locations[i].price))
+=======
+            parking_locations[i].c_name,'<br>Day', parking_locations[i].day ,'<br>Price', parking_locations[i].price))
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
                 infowindow.open(map, marker)
               }
             })(marker, i)
@@ -211,7 +232,11 @@
       * The callback parameter executes the initMap() function
       -->
     <script async defer
+<<<<<<< HEAD
       src="https://maps.googleapis.com/maps/api/js?key=API_KEY&callback=initMap">
+=======
+      src="https://maps.googleapis.com/maps/api/js?key=<APIKEY>&callback=initMap">
+>>>>>>> 5fc4a028f82d639276f922aa520e41acae4c659c
     </script>        
   </div>  
   
